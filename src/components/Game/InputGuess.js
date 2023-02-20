@@ -1,11 +1,14 @@
 import  React from 'react';
 
-function InputGuess() {
+function InputGuess({handleGuessSubmitted}) {
     const [guess, setGuess] = React.useState('');
-    console.log(guess);
 
     const handleLetterEntered = (e) => {
-        setGuess(e.target.value.toUpperCase().replace(/[^A-Z]/g, ''));
+        var guessValue =e.target.value.toUpperCase().replace(/[^A-Z]/g, '');
+        if(guessValue.length === 5){
+            handleGuessSubmitted(guessValue);
+        }
+        setGuess(guessValue);
     }
 
     return (
