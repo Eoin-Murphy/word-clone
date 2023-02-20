@@ -20,7 +20,7 @@ function Game() {
 
   return (
   <div>
-    <GuessResults guesses={guesses}/>
+    <GuessResults guesses={guesses} answer={answer} />
     <InputGuess handleGuessSubmitted={handleGuessSubmitted}/>
     {guesses.length > 0 && guesses[guesses.length - 1] === answer && (
       <Success guessCount={guesses.length} />
