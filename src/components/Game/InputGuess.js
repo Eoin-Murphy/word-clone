@@ -17,7 +17,7 @@ function InputGuess({handleGuessSubmitted}) {
     return (
         <form className="guess-input-wrapper" onSubmit={handleSubmit}>
             <label htmlFor="guessInput">Enter Guess:</label>
-            <input value={guess} onChange={handleLetterEntered} id="guessInput" type="text" maxLength={5}></input>
+            <input value={guess} autoFocus={true} onChange={handleLetterEntered} id="guessInput" type="text" maxLength={5}></input>
         </form>
     );
 }
