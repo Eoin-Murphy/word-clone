@@ -15,7 +15,7 @@ function GuessResults({guesses, answer}) {
     return (
         <div className="guess-results">
         {guesses.map((guess) => 
-        <p key={guess} className="guess">
+        <p key={Math.random()} className="guess">
             {[...guess].map((char, index) => 
                 <span className={getClass(char, index)} key={Math.random()}>{char}</span>
             )}
