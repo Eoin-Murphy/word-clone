@@ -2,7 +2,7 @@ function Failure({answer}) {
   return (
     <div className="sad banner">
       <p>
-        <strong>Sorry, you failed to guess the word. {answer}</strong>
+        <strong>Sorry, ythe correct answer is {answer}</strong>
       </p>
     </div>);
 }
